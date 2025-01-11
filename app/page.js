@@ -66,13 +66,13 @@ export default function Home() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Techstack">
+                <ListItem title="Techstack">
                   MERN (MongoDB + Express + React + Node.js) + React Native Expo
                 </ListItem>
-                <ListItem href="/docs/installation" title="Education">
+                <ListItem title="Education">
                   UC San Diego M.S. | Purdue B.S.
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Hobbies">
+                <ListItem title="Hobbies">
                   League of Legends, Movies, and Gourmet
                 </ListItem>
               </ul>
