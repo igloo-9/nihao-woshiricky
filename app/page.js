@@ -14,25 +14,23 @@ export default function IndexPage() {
   return (
     <>
       <MainNav />
-      <div>
-        <PageHeader>
-          <Announcement />
-          <PageHeaderHeading>Hello there, I'm Ricky</PageHeaderHeading>
-          <PageHeaderDescription>
-            A full-stack developer and a tech enthusiast. I love building things
-            that make a difference. Feel free to explore my work and get in
-            touch :)
-          </PageHeaderDescription>
-          <PageActions>
-            <Button asChild size="sm">
-              <Link href="/">Leave a Message</Link>
-            </Button>
-            <Button asChild size="sm" variant="ghost">
-              <Link href="/">Change View</Link>
-            </Button>
-          </PageActions>
-        </PageHeader>
-      </div>
+      <PageHeader>
+        <Announcement />
+        <PageHeaderHeading>Hello there, I'm Ricky</PageHeaderHeading>
+        <PageHeaderDescription>
+          A full-stack developer and a tech enthusiast. I love building things
+          that make a difference. Feel free to explore my work and get in touch
+          :)
+        </PageHeaderDescription>
+        <PageActions>
+          <Button asChild size="sm">
+            <Link href="/">Leave a Message</Link>
+          </Button>
+          <Button asChild size="sm" variant="ghost">
+            <Link href="/">Change View</Link>
+          </Button>
+        </PageActions>
+      </PageHeader>
     </>
   )
 }
