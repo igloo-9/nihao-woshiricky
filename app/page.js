@@ -60,7 +60,9 @@ export default function Home() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Who am I</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-lg">
+              Who am I
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -92,7 +94,9 @@ export default function Home() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>My wuhks</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-lg">
+              My wuhks
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {components.map((component) => (
@@ -110,7 +114,9 @@ export default function Home() {
           <NavigationMenuItem>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <Dialog>
-                <DialogTrigger>Come say hello</DialogTrigger>
+                <DialogTrigger className="text-lg">
+                  Come say hello
+                </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
                     <DialogTitle>Hello there</DialogTitle>
