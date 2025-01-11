@@ -1,8 +1,14 @@
-'use client'
-
-import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { Announcement } from '@/components/announcement'
+import {
+  PageActions,
+  PageHeader,
+  PageHeaderDescription,
+  PageHeaderHeading,
+} from '@/components/page-header'
+import { Button } from '@/components/ui/button'
 
 const navItemsStyle = 'text-stone-600 text-sm'
 
@@ -47,21 +53,25 @@ export default function Home() {
       </nav>
 
       {/* main */}
-      <main className="pt-14">
-        <section className="min-h-screen bg-stone/80 flex flex-col items-center justify-center">
-          <h1 className="text-2xl font-semibold mb-4">
-            Scroll Down to See the Blur Effect
-          </h1>
-          <p className="max-w-xl text-center">
-            By applying <code>bg-white/80</code> and{' '}
-            <code>backdrop-blur-md</code>, the navigation menu will appear
-            partially transparent with a Gaussian blur behind it.
-          </p>
-        </section>
-        <section className="min-h-screen bg-gray-100 flex items-center justify-center">
-          <p className="text-xl">Keep scrolling...</p>
-        </section>
-      </main>
+      <div className="pt-14 ml-6">
+        <PageHeader>
+          <Announcement />
+          <PageHeaderHeading>Hello there, I'm Ricky</PageHeaderHeading>
+          <PageHeaderDescription>
+            A full-stack developer and a tech enthusiast. I love building things
+            that make a difference. Feel free to explore my work and get in
+            touch :)
+          </PageHeaderDescription>
+          <PageActions>
+            <Button asChild size="sm">
+              <Link href="/">Leave a Message</Link>
+            </Button>
+            <Button asChild size="sm" variant="ghost">
+              <Link href="/">Change View</Link>
+            </Button>
+          </PageActions>
+        </PageHeader>
+      </div>
     </>
   )
 }
