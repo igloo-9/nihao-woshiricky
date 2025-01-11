@@ -27,6 +27,11 @@ const components = [
     description:
       'A YouTube video downloading webapp. Currently down for maintenance.',
   },
+  {
+    title: 'EDM',
+    href: '/',
+    description: 'An unofficial Spotify music player on Discord.',
+  },
 ]
 
 export default function Home() {
@@ -49,7 +54,7 @@ export default function Home() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
+                      href="/resume-jqgu.pdf"
                     >
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Jiaqi Gu
