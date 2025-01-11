@@ -1,177 +1,67 @@
 'use client'
 
 import * as React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { cn } from '@/lib/utils'
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-
-import { Button } from '@/components/ui/button'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
-
-const components = [
-  {
-    title: 'Lopi',
-    href: '/',
-    description:
-      'A public restroom passcode sharing mobile app (under development).',
-  },
-  {
-    title: 'Tubing',
-    href: '/',
-    description:
-      'A YouTube video downloading webapp. Currently down for maintenance.',
-  },
-  {
-    title: 'EDM',
-    href: '/',
-    description: 'An unofficial Spotify music player on Discord.',
-  },
-]
+const navItemsStyle = 'text-stone-600 text-sm'
 
 export default function Home() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-      }}
-    >
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-lg">
-              Who am I
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/resume-jqgu.pdf"
-                    >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Jiaqi Gu
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        I'm a dedicated software engineer and my preferred name
-                        is Ricky :)
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem title="Techstack">
-                  MERN (MongoDB + Express + React + Node.js) + React Native Expo
-                </ListItem>
-                <ListItem title="Education">
-                  UC San Diego M.S. | Purdue B.S.
-                </ListItem>
-                <ListItem title="Hobbies">
-                  League of Legends, Movies, and Gourmet
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-lg">
-              My wuhks
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <Dialog>
-                <DialogTrigger className="text-lg">
-                  Come say hello
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Hello there</DialogTitle>
-                    <DialogDescription>
-                      Leave a message to me. I'm happy to hear from you :)
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="grid gap-4 py-4">
-                    <div className="grid grid-cols-4 items-center gap-4">
-                      <Label htmlFor="name" className="text-right">
-                        Email
-                      </Label>
-                      <Input id="email" value="" className="col-span-3" />
-                    </div>
-                    <div className="grid grid-cols-4 items-start gap-4">
-                      <Label htmlFor="username" className="text-right">
-                        Message
-                      </Label>
-                      <Textarea className="col-span-3" />
-                    </div>
-                  </div>
-                  <DialogFooter>
-                    <Button type="submit">Save changes</Button>
-                  </DialogFooter>
-                </DialogContent>
-              </Dialog>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+    <>
+      {/* navigation menu */}
+      <nav className="fixed top-0 left-0 w-full h-14 bg-stone/80 backdrop-blur-md flex items-center gap-8 px-4 z-50 border-b border-stone-100">
+        <div className="flex items-center ml-2 gap-2">
+          <Image
+            src="/letter-r.png"
+            width={25}
+            height={25}
+            alt="alphabet denotion"
+          />
+          <h4 className="scroll-m-20 text-md font-semibold tracking-tight">
+            ricky/portfolio
+          </h4>
+        </div>
+        <ul className="flex gap-8">
+          <li>
+            <Link href="/" className={navItemsStyle}>
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link href="/" className={navItemsStyle}>
+              Worklog
+            </Link>
+          </li>
+          <li>
+            <Link href="/" className={navItemsStyle}>
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link href="/" className={navItemsStyle}>
+              ShadCN
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* main */}
+      <main className="pt-14">
+        <section className="min-h-screen bg-stone/80 flex flex-col items-center justify-center">
+          <h1 className="text-2xl font-semibold mb-4">
+            Scroll Down to See the Blur Effect
+          </h1>
+          <p className="max-w-xl text-center">
+            By applying <code>bg-white/80</code> and{' '}
+            <code>backdrop-blur-md</code>, the navigation menu will appear
+            partially transparent with a Gaussian blur behind it.
+          </p>
+        </section>
+        <section className="min-h-screen bg-gray-100 flex items-center justify-center">
+          <p className="text-xl">Keep scrolling...</p>
+        </section>
+      </main>
+    </>
   )
 }
-
-const ListItem = React.forwardRef(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-              className,
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-              {children}
-            </p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    )
-  },
-)
-ListItem.displayName = 'ListItem'
