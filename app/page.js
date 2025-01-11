@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
+import { MainNav } from '@/components/main-nav'
 import { Announcement } from '@/components/announcement'
 import {
   PageActions,
@@ -10,49 +10,10 @@ import {
 } from '@/components/page-header'
 import { Button } from '@/components/ui/button'
 
-const navItemsStyle = 'text-stone-600 text-sm'
-
-export default function Home() {
+export default function IndexPage() {
   return (
     <>
-      {/* navigation menu */}
-      <nav className="fixed top-0 left-0 w-full h-14 bg-stone/80 backdrop-blur-md flex items-center gap-8 px-4 z-50 border-b border-stone-100">
-        <div className="flex items-center ml-2 gap-2">
-          <Image
-            src="/letter-r.png"
-            width={25}
-            height={25}
-            alt="alphabet denotion"
-          />
-          <h4 className="scroll-m-20 text-md font-semibold tracking-tight">
-            ricky/portfolio
-          </h4>
-        </div>
-        <ul className="flex gap-8">
-          <li>
-            <Link href="/" className={navItemsStyle}>
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className={navItemsStyle}>
-              Worklog
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className={navItemsStyle}>
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className={navItemsStyle}>
-              ShadCN
-            </Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* main */}
+      <MainNav />
       <div className="pt-14 ml-6">
         <PageHeader>
           <Announcement />
