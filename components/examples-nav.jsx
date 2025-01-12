@@ -8,8 +8,8 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 
 const examples = [
   {
-    name: 'Education',
-    href: '/examples/education',
+    name: 'Academic',
+    href: '/examples/academic',
     code: '',
     hidden: false,
   },
