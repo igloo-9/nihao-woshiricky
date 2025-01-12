@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 function PageHeader({ className, children, ...props }) {
   return (
     <section className={cn('border-grid border-b', className)} {...props}>
-      <div className="container-wrapper mt-6 ml-6">
+      <div className="container-wrapper ml-6">
         <div className="container flex flex-col items-start gap-1 py-8 md:py-10 lg:py-12">
           {children}
         </div>
