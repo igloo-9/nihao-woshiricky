@@ -11,21 +11,23 @@ const daysDifference = differenceInDays(today, start)
 
 export function CardsCalendar() {
   return (
-    <Card className="max-w-[260px]">
-      <CardHeader>
-        <CardTitle>Day {daysDifference} in love w/ LLM</CardTitle>
-      </CardHeader>
-      <CardContent className="p-1">
-        <Calendar
-          numberOfMonths={1}
-          mode="range"
-          defaultMonth={today}
-          selected={{
-            from: start,
-            to: today,
-          }}
-        />
-      </CardContent>
-    </Card>
+    <div>
+      <Card className="max-w-[260px]">
+        <CardHeader>
+          <CardTitle>Day {daysDifference} in love w/ LLM</CardTitle>
+        </CardHeader>
+        <CardContent className="p-1">
+          <Calendar
+            numberOfMonths={1}
+            mode="range"
+            defaultMonth={today}
+            selected={{
+              from: start,
+              to: today,
+            }}
+          />
+        </CardContent>
+      </Card>
+    </div>
   )
 }
