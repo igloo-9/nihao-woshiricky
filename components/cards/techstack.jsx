@@ -32,7 +32,7 @@ export function CardsTechstack() {
         <CardHeader>
           <CardTitle>Techstack</CardTitle>
           <CardDescription>
-            MERN stack and React Native Expo are my main tech choice.
+            MERN stack and React Native Expo are my main tech choices.
           </CardDescription>
         </CardHeader>
         <Carousel className="w-full max-w-xs">
