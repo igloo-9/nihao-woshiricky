@@ -9,6 +9,8 @@ import {
   PageHeaderHeading,
 } from '@/components/page-header'
 import { ExamplesNav } from '@/components/examples-nav'
+import { CardsDemo } from '@/components/cards'
+
 import { Button } from '@/components/ui/button'
 
 export default function IndexPage() {
@@ -37,6 +39,13 @@ export default function IndexPage() {
           <div className="container py-4">
             <ExamplesNav className="[&>a:first-child]:text-primary" />
           </div>
+        </div>
+      </div>
+      <div className="container-wrapper pl-6">
+        <div className="container py-6">
+          <section className="hidden md:block [&>div]:p-0">
+            <CardsDemo />
+          </section>
         </div>
       </div>
     </>
