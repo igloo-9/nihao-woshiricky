@@ -8,6 +8,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header'
+import { ExamplesNav } from '@/components/examples-nav'
 import { Button } from '@/components/ui/button'
 
 export default function IndexPage() {
@@ -31,6 +32,13 @@ export default function IndexPage() {
           </Button>
         </PageActions>
       </PageHeader>
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <div className="container py-4">
+            <ExamplesNav className="[&>a:first-child]:text-primary" />
+          </div>
+        </div>
+      </div>
     </>
   )
 }
