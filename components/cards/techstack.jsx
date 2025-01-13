@@ -1,4 +1,9 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
+
 import {
   Card,
   CardHeader,
@@ -15,10 +20,21 @@ import {
 } from '@/components/ui/carousel'
 
 export function CardsTechstack() {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   const icons = [
-    'mongodb',
-    'express',
     'react',
+    'express',
+    'mongodb',
     'nodejs',
     'nextjs',
     'tailwindcss',
@@ -43,7 +59,7 @@ export function CardsTechstack() {
                   <Card className="m-2 p-6">
                     <CardContent className="flex aspect-square w-50 h-50 items-center justify-center p-14">
                       <Image
-                        src={`/examples/${icon}.svg`}
+                        src={`/examples/techstack/${icon}-${resolvedTheme}.svg`}
                         width={icon === 'mongodb' ? 50 : 75}
                         height={icon === 'mongodb' ? 50 : 75}
                         alt={`${icon} Icon`}
