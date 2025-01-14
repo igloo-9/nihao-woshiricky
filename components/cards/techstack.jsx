@@ -56,7 +56,7 @@ export function CardsTechstack() {
             {icons.map((icon, index) => (
               <CarouselItem key={index}>
                 <div className="p-1">
-                  <Card className="m-2 p-6">
+                  <Card className="m-2 p-6 shadow-none">
                     <CardContent className="flex aspect-square w-50 h-50 items-center justify-center p-14">
                       <Image
                         src={`/examples/techstack/${icon}-${resolvedTheme}.svg`}
