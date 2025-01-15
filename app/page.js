@@ -17,7 +17,7 @@ export default function IndexPage() {
   return (
     <>
       <MainNav />
-      <PageHeader>
+      <PageHeader className="mt-12">
         <Announcement />
         <PageHeaderHeading>Hello there, I'm Ricky</PageHeaderHeading>
         <PageHeaderDescription>
