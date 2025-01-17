@@ -2,6 +2,7 @@ import { CardsEducation } from '@/components/cards/education'
 import { CardsTechstack } from '@/components/cards/techstack'
 import { CardsSocialMedia } from '@/components/cards/social-media'
 import { CardsCalendar } from '@/components/cards/calendar'
+import { CardsHobbies } from '@/components/cards/hobbies'
 
 export function CardsDemo() {
   return (
@@ -10,6 +11,9 @@ export function CardsDemo() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-[45%_55%]">
           <div className="self-start">
             <CardsEducation />
+            <div className="pt-3 sm:pt-2 xl:pt-4">
+              <CardsHobbies />
+            </div>
           </div>
           <div className="self-start">
             <CardsTechstack />
