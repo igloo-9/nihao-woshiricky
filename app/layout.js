@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/providers'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeSwitcher } from '@/components/theme-switcher'
+import { SiteFooter } from '@/components/site-footer'
 
 export const metadata = {
   title: {
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
               <div className="relative flex min-h-svh flex-col bg-background">
                 {children}
               </div>
+              <SiteFooter />
             </div>
             <TailwindIndicator />
             <ThemeSwitcher />

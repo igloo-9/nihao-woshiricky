@@ -5,7 +5,9 @@ export const siteConfig = {
   description: 'Personal website for portfolio and blog posts mainly.',
   links: {
     twitter: '',
-    github: '',
+    github:
+      'https://github.com/igloo-9?tab=overview&from=2024-12-01&to=2024-12-31',
+    shadcn: 'https://ui.shadcn.com/',
   },
 }
 
