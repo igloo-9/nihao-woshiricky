@@ -4,6 +4,7 @@ import { CardsSocialMedia } from '@/components/cards/social-media'
 import { CardsCalendar } from '@/components/cards/calendar'
 import { CardsHobbies } from '@/components/cards/hobbies'
 import { CardsMetric } from '@/components/cards/contribution-metric'
+import { CardsMessaging } from '@/components/cards/messaging'
 
 export function CardsDemo() {
   return (
@@ -29,11 +30,11 @@ export function CardsDemo() {
           <div className="self-start">
             <CardsMetric />
             <div className="pt-3 sm:pt-2 xl:pt-4">
-              <CardsSocialMedia />
+              <CardsMessaging />
             </div>
           </div>
           <div className="self-start">
-            <CardsCalendar />
+            <CardsSocialMedia />
           </div>
         </div>
       </div>
