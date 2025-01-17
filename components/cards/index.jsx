@@ -5,6 +5,7 @@ import { CardsCalendar } from '@/components/cards/calendar'
 import { CardsHobbies } from '@/components/cards/hobbies'
 import { CardsMetric } from '@/components/cards/contribution-metric'
 import { CardsMessaging } from '@/components/cards/messaging'
+import { CardsProjects } from '@/components/cards/projects'
 
 export function CardsDemo() {
   return (
@@ -35,6 +36,9 @@ export function CardsDemo() {
           </div>
           <div className="self-start">
             <CardsSocialMedia />
+            <div className="pt-3 sm:pt-2 xl:pt-4">
+              <CardsProjects />
+            </div>
           </div>
         </div>
       </div>
