@@ -26,8 +26,8 @@ export function MainNav() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md shadow">
-      <section className="border-grid border-b">
+    <nav className="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <section>
         <div className="py-4 mx-6 flex justify-between">
           <div className="flex">
             <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
