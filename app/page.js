@@ -42,7 +42,7 @@ export default function IndexPage() {
         </div>
       </div>
       <div className="container-wrapper pl-6">
-        <div className="container py-6">
+        <div className="mr-10 py-6">
           <section className="hidden md:block [&>div]:p-0">
             <CardsDemo />
           </section>

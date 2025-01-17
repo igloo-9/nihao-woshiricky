@@ -11,11 +11,11 @@ const daysDifference = differenceInDays(today, start)
 
 export function CardsCalendar() {
   return (
-    <Card className="max-w-[260px]">
+    <Card className="">
       <CardHeader>
         <CardTitle>Day {daysDifference} in love w/ LLM</CardTitle>
       </CardHeader>
-      <CardContent className="p-1">
+      <CardContent className="p-1 flex items-center justify-center">
         <Calendar
           numberOfMonths={1}
           mode="range"
