@@ -3,6 +3,7 @@ import { CardsTechstack } from '@/components/cards/techstack'
 import { CardsSocialMedia } from '@/components/cards/social-media'
 import { CardsCalendar } from '@/components/cards/calendar'
 import { CardsHobbies } from '@/components/cards/hobbies'
+import { CardsMetric } from '@/components/cards/contribution-metric'
 
 export function CardsDemo() {
   return (
@@ -12,18 +13,24 @@ export function CardsDemo() {
           <div className="self-start">
             <CardsEducation />
             <div className="pt-3 sm:pt-2 xl:pt-4">
-              <CardsHobbies />
+              <CardsCalendar />
             </div>
           </div>
           <div className="self-start">
             <CardsTechstack />
+            <div className="pt-3 sm:pt-2 xl:pt-4">
+              <CardsHobbies />
+            </div>
           </div>
         </div>
       </div>
       <div className="space-y-4 lg:col-span-5 xl:col-span-6 xl:space-y-4">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-[55%_45%]">
           <div className="self-start">
-            <CardsSocialMedia />
+            <CardsMetric />
+            <div className="pt-3 sm:pt-2 xl:pt-4">
+              <CardsSocialMedia />
+            </div>
           </div>
           <div className="self-start">
             <CardsCalendar />
