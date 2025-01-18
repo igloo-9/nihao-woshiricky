@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import emailjs from 'emailjs-com'
 import { Button } from '@/Components/ui/button'
 import {
@@ -27,6 +27,7 @@ import {
 export function Messaging({ messaging, setMessaging }) {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
+  const dialogRef = useRef(null)
 
   const handleSubmit = () => {
     const templateParams = {
@@ -59,9 +60,23 @@ export function Messaging({ messaging, setMessaging }) {
     }, 3000)
   }
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dialogRef.current && !dialogRef.current.contains(event.target)) {
+        setMessaging(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [setMessaging])
+
   return (
     <AlertDialog open={true}>
       <AlertDialogContent
+        ref={dialogRef}
         className={messaging ? '' : 'hidden' + `z-50 fixed h-fit items-center`}
       >
         <AlertDialogHeader>
