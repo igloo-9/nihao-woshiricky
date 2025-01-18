@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils'
 
 import { ModeSwitcher } from '@/components/mode-switcher'
 import { Icons } from '@/components/icons'
+import { Button } from '@/components/ui/button'
 
 export function MainNav() {
   const pathname = usePathname()
@@ -96,7 +97,18 @@ export function MainNav() {
               </Link>
             </nav>
           </div>
-          <ModeSwitcher />
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon" className="h-8 w-8 px-0">
+              <Link
+                href={siteConfig.links.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icons.gitHub className="h-4 w-4" />
+              </Link>
+            </Button>
+            <ModeSwitcher />
+          </div>
         </div>
       </section>
     </nav>
