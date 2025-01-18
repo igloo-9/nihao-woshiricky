@@ -38,10 +38,10 @@ export function MainNav() {
             </Link>
             <nav className="flex items-center gap-4 text-sm xl:gap-6">
               <Link
-                href="/"
+                href="/dev"
                 className={cn(
                   'transition-colors hover:text-foreground/80',
-                  pathname === '/docs'
+                  pathname === '/dev'
                     ? 'text-foreground'
                     : 'text-foreground/80',
                 )}
@@ -49,7 +49,7 @@ export function MainNav() {
                 Resume
               </Link>
               <Link
-                href="/"
+                href="/dev"
                 className={cn(
                   'transition-colors hover:text-foreground/80',
                   pathname?.startsWith('/docs/components') &&
@@ -61,7 +61,7 @@ export function MainNav() {
                 Worklog
               </Link>
               <Link
-                href="/"
+                href="/dev"
                 className={cn(
                   'transition-colors hover:text-foreground/80',
                   pathname?.startsWith('/docs/components') &&
@@ -73,7 +73,7 @@ export function MainNav() {
                 Codeframes
               </Link>
               <Link
-                href="/"
+                href="/dev"
                 className={cn(
                   'transition-colors hover:text-foreground/80',
                   pathname?.startsWith('/blocks')
@@ -84,7 +84,7 @@ export function MainNav() {
                 Blog
               </Link>
               <Link
-                href="/"
+                href="/dev"
                 className={cn(
                   'transition-colors hover:text-foreground/80',
                   pathname?.startsWith('/blocks')
