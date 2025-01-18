@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { MainNav } from '@/components/main-nav'
 import { Announcement } from '@/components/announcement'
@@ -10,10 +13,16 @@ import {
 } from '@/components/page-header'
 import { ExamplesNav } from '@/components/examples-nav'
 import { CardsDemo } from '@/components/cards'
+import { Messaging } from '@/components/messaging'
 
 import { Button } from '@/components/ui/button'
 
 export default function IndexPage() {
+  const [messaging, setMessaging] = useState(false)
+  const handleMessaging = (e) => {
+    setMessaging(true)
+  }
+
   return (
     <>
       <MainNav />
@@ -26,13 +35,16 @@ export default function IndexPage() {
           :)
         </PageHeaderDescription>
         <PageActions>
-          <Button asChild size="sm">
-            <Link href="/">Leave a Message</Link>
+          <Button size="sm" onClick={handleMessaging}>
+            Leave a Message
           </Button>
           <Button asChild size="sm" variant="ghost">
             <Link href="/">Change View</Link>
           </Button>
         </PageActions>
+        {messaging && (
+          <Messaging messaging={messaging} setMessaging={setMessaging} />
+        )}
       </PageHeader>
       <div className="border-grid border-b">
         <div className="container-wrapper">

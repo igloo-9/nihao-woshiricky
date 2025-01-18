@@ -32,6 +32,7 @@ export function CardsHobbies() {
   if (!mounted) {
     return null
   }
+
   return (
     <Card>
       <CardHeader>
