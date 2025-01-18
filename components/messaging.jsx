@@ -2,15 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react'
 import emailjs from 'emailjs-com'
-import { Button } from '@/Components/ui/button'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/Components/ui/label'
