@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
 
 export default function IndexPage() {
   const [messaging, setMessaging] = useState(false)
-  const handleMessaging = (e) => {
+  const handleMessaging = () => {
     setMessaging(true)
   }
 
