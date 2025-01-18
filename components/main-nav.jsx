@@ -12,6 +12,8 @@ import { ModeSwitcher } from '@/components/mode-switcher'
 import { Icons } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 
+import { MobileNav } from '@/components/mobile-nav'
+
 export function MainNav() {
   const pathname = usePathname()
 
@@ -30,7 +32,8 @@ export function MainNav() {
     <nav className="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <section>
         <div className="py-4 mx-6 flex justify-between">
-          <div className="flex">
+          <MobileNav className="md:hidden" />
+          <div className="hidden md:flex">
             <Link href="/" className="mr-4 flex items-center gap-2 lg:mr-6">
               <Icons.logo theme={resolvedTheme} />
               <span className="hidden font-bold lg:inline-block">
