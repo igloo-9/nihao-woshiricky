@@ -9,7 +9,7 @@ import { CardsProjects } from '@/components/cards/projects'
 
 export function CardsDemo() {
   return (
-    <div className="md:grids-col-2 grid md:gap-4 lg:grid-cols-10 xl:grid-cols-11 xl:gap-8">
+    <div className="grid md:grids-col-2 gap-4 lg:grid-cols-10 xl:grid-cols-11 xl:gap-8">
       <div className="space-y-4 lg:col-span-5 xl:col-span-5 xl:space-y-4">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-[45%_55%]">
           <div className="self-start">

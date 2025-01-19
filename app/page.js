@@ -13,6 +13,7 @@ import {
 } from '@/components/page-header'
 import { ExamplesNav } from '@/components/examples-nav'
 import { CardsDemo } from '@/components/cards'
+import { CardsMobileDemo } from '@/components/cards/mobile-index'
 import { Messaging } from '@/components/messaging'
 
 import { Button } from '@/components/ui/button'
@@ -57,6 +58,9 @@ export default function IndexPage() {
         <div className="mr-10 py-6">
           <section className="hidden md:block [&>div]:p-0">
             <CardsDemo />
+          </section>
+          <section className="md:hidden">
+            <CardsMobileDemo />
           </section>
         </div>
       </div>
