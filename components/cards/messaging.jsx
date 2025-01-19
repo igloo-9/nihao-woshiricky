@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
-import { Button } from '@/Components/ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/Components/ui/label'
+import { Label } from '@/components/ui/label'
 import {
   AlertDialog,
   AlertDialogAction,
