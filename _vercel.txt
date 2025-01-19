@@ -1,0 +1,1 @@
+vc-domain-verify=ricky.platform.app,2e6087435b4d9f04e1bd
