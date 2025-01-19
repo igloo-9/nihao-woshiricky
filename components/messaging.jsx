@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import emailjs from 'emailjs-com'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { Label } from '@/Components/ui/label'
+import { Label } from '@/components/ui/label'
 import {
   AlertDialog,
   AlertDialogAction,
