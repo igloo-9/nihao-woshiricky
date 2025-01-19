@@ -40,7 +40,7 @@ export default function IndexPage() {
             Leave a Message
           </Button>
           <Button asChild size="sm" variant="ghost">
-            <Link href="/">Change View</Link>
+            <Link href="/dev">Change View</Link>
           </Button>
         </PageActions>
         {messaging && (
