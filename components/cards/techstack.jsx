@@ -70,8 +70,8 @@ export function CardsTechstack() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute ml-4 sm:left-0 sm:ml-6" />
-          <CarouselNext className="absolute mr-4 sm:right-0 sm:mr-6" />
+          <CarouselPrevious className="absolute sm:left-0 ml-6" />
+          <CarouselNext className="absolute m:right-0 mr-6" />
         </Carousel>
       </div>
     </Card>
