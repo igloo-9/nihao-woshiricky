@@ -45,12 +45,7 @@ export function DevAlert() {
           >
             <div className="hidden sm:block">Back</div>
             <div className="sm:hidden">
-              <Image
-                src={`back-${resolvedTheme}.svg`}
-                width={15}
-                height={15}
-                alt="Back Icon"
-              />
+              back
             </div>
           </Button>
         </div>
